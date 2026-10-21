@@ -211,7 +211,7 @@ export default function Hero({ lang, onOpenAdmission }) {
             {/* Primary Enroll Button */}
             <button
               onClick={onOpenAdmission}
-              className="hero-enroll-btn shimmer-btn magnetic-btn"
+              className="hero-enroll-btn"
               style={{
                 width: '100%',
                 background: 'var(--theme-gradient)',
@@ -222,18 +222,16 @@ export default function Hero({ lang, onOpenAdmission }) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '10px',
-                boxShadow: '0 6px 18px var(--theme-glow)',
+                boxShadow: '0 4px 14px var(--theme-glow)',
                 cursor: 'pointer',
                 border: 'none',
-                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                transition: 'opacity 0.2s ease'
               }}
               onMouseEnter={(e) => { 
-                e.currentTarget.style.transform = 'translateY(-3px)'; 
-                e.currentTarget.style.boxShadow = '0 10px 24px var(--theme-glow)';
+                e.currentTarget.style.opacity = '0.94';
               }}
               onMouseLeave={(e) => { 
-                e.currentTarget.style.transform = 'translateY(0)'; 
-                e.currentTarget.style.boxShadow = '0 6px 18px var(--theme-glow)';
+                e.currentTarget.style.opacity = '1';
               }}
             >
               <GraduationCap size={20} />
@@ -251,7 +249,7 @@ export default function Hero({ lang, onOpenAdmission }) {
               {/* Call Button */}
               <a
                 href="tel:9876543210"
-                className="hero-call-btn magnetic-btn"
+                className="hero-call-btn"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -265,17 +263,15 @@ export default function Hero({ lang, onOpenAdmission }) {
                   fontWeight: 900,
                   fontSize: '0.90rem',
                   textDecoration: 'none',
-                  boxShadow: '0 4px 10px rgba(0, 86, 179, 0.1)',
-                  transition: 'all 0.2s ease',
+                  boxShadow: '0 2px 6px rgba(0, 86, 179, 0.08)',
+                  transition: 'background-color 0.2s ease',
                   whiteSpace: 'nowrap'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'var(--primary-light-blue)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = '#ffffff';
-                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 <Phone size={15} style={{ flexShrink: 0 }} />
@@ -287,7 +283,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                 href="https://wa.me/919876543210?text=Hello%20Demo%20Tuition%20Centre,%20I%20want%20to%20enquire%20about%20admissions"
                 target="_blank"
                 rel="noreferrer"
-                className="hero-btn-wa magnetic-btn"
+                className="hero-btn-wa"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -300,17 +296,15 @@ export default function Hero({ lang, onOpenAdmission }) {
                   fontWeight: 900,
                   fontSize: '0.90rem',
                   textDecoration: 'none',
-                  boxShadow: '0 4px 12px rgba(37, 211, 102, 0.35)',
-                  transition: 'all 0.25s ease',
+                  boxShadow: '0 3px 10px rgba(37, 211, 102, 0.3)',
+                  transition: 'background-color 0.2s ease',
                   whiteSpace: 'nowrap'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 18px rgba(37, 211, 102, 0.45)';
+                  e.currentTarget.style.background = '#20bd5a';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 211, 102, 0.35)';
+                  e.currentTarget.style.background = '#25D366';
                 }}
               >
                 <WhatsAppIcon size={17} style={{ flexShrink: 0 }} />
@@ -450,10 +444,15 @@ export default function Hero({ lang, onOpenAdmission }) {
         .hero-enroll-btn {
           padding: 13px 22px;
           font-size: 0.98rem;
+          transform: none !important;
         }
-        .hero-call-btn, .hero-wa-btn {
+        .hero-call-btn, .hero-btn-wa, .hero-wa-btn {
           padding: 11px 14px;
           font-size: 0.92rem;
+          transform: none !important;
+        }
+        .hero-enroll-btn:hover, .hero-call-btn:hover, .hero-btn-wa:hover, .hero-wa-btn:hover {
+          transform: none !important;
         }
 
         /* Mobile View (max-width: 959px) */
