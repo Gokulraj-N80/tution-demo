@@ -17,7 +17,6 @@ import { useScrollReveal } from './utils/useScrollReveal';
 import { useSmoothScroll } from './utils/useSmoothScroll';
 import { useAgencyMotion } from './utils/useAgencyMotion';
 import ScrollProgressBar from './components/ScrollProgressBar';
-import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [lang, setLang] = useState('ta'); // Default to Tamil ('ta')
@@ -47,9 +46,6 @@ function App() {
     <div className="app-container">
       {/* Top Subtle Reading Progress Indicator */}
       <ScrollProgressBar />
-
-      {/* Desktop Agency Custom Cursor Follower */}
-      <CustomCursor />
 
       {/* Header with Nav, Language Toggle & Theme Switcher */}
       <Header

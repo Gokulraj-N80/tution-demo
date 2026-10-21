@@ -113,6 +113,25 @@
   transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+/* ==========================================================================
+   CUSTOM COLORED ARROW CURSORS (Classic Arrow Pointer with Brand Colors)
+   ========================================================================== */
+
+/* Default State: Royal Blue Arrow Pointer with Crisp White Border & Soft Shadow */
+html, body, * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cfilter id='s' x='-20%25' y='-20%25' width='150%25' height='150%25'%3E%3CfeDropShadow dx='0.8' dy='1.2' stdDeviation='0.8' flood-color='%23000000' flood-opacity='0.38'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M1.5 1.5 L1.5 19 L6 14.5 L9.5 22 L12.5 20.5 L9 13.5 L15 13.5 Z' fill='%230056b3' stroke='%23ffffff' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/%3E%3C/svg%3E") 1 1, auto;
+}
+
+/* Hover / Interactive State: Emerald Green Arrow Pointer */
+a, button, [role="button"], input[type="submit"], input[type="button"], select, .cursor-pointer, .clickable, .shimmer-btn, .hover-lift, summary {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cfilter id='s' x='-20%25' y='-20%25' width='150%25' height='150%25'%3E%3CfeDropShadow dx='0.8' dy='1.2' stdDeviation='0.8' flood-color='%23000000' flood-opacity='0.38'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M1.5 1.5 L1.5 19 L6 14.5 L9.5 22 L12.5 20.5 L9 13.5 L15 13.5 Z' fill='%2300875a' stroke='%23ffffff' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/%3E%3C/svg%3E") 1 1, pointer !important;
+}
+
+/* Text Inputs retain standard I-beam */
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  cursor: text !important;
+}
+
 html, body {
   width: 100%;
   max-width: 100vw;
