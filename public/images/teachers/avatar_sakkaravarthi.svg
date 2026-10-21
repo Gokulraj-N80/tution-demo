@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-sakkaravarthi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="attire-sakkaravarthi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="skin-sakkaravarthi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bg-sakkaravarthi)"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Attire / Shoulders -->
+  <path d="M30 200 C30 152 65 142 100 142 C135 142 170 152 170 200 Z" fill="url(#attire-sakkaravarthi)"/>
+  
+  <!-- Crisp Formal White Shirt Collar -->
+  <polygon points="100,166 80,142 120,142" fill="#ffffff"/>
+  
+  <!-- Maroon Tie -->
+  <polygon points="96,155 104,155 106,190 100,198 94,190" fill="#991b1b"/>
+  
+  <!-- Neck -->
+  <rect x="90" y="118" width="20" height="28" rx="4" fill="url(#skin-sakkaravarthi)"/>
+  
+  <!-- Faceless Head / Jaw -->
+  <ellipse cx="100" cy="85" rx="30" ry="36" fill="url(#skin-sakkaravarthi)"/>
+  
+  <!-- Professional Hair -->
+  <path d="M68 84 C68 50 82 42 100 42 C118 42 132 50 132 84 C132 66 124 54 100 54 C76 54 68 66 68 84 Z" fill="#1e293b"/>
+  <path d="M68 78 Q74 54 100 50 Q124 52 132 78 Q126 50 100 44 Q74 48 68 78 Z" fill="#0f172a"/>
+
+  <!-- Minimalist Clean Eyeglasses -->
+  <circle cx="84" cy="82" r="9.5" fill="none" stroke="#fde047" stroke-width="2.5"/>
+  <circle cx="116" cy="82" r="9.5" fill="none" stroke="#fde047" stroke-width="2.5"/>
+  <line x1="93.5" y1="82" x2="106.5" y2="82" stroke="#fde047" stroke-width="2.5"/>
+</svg>
