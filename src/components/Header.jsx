@@ -159,26 +159,23 @@ export default function Header({ lang, setLang, theme = 'royal-blue', setTheme, 
           {/* Apply Now Pill Button (Desktop Only) */}
           <button
             onClick={onOpenAdmission}
-            className="desktop-apply-btn"
+            className="desktop-apply-btn shimmer-btn magnetic-btn"
             style={{
-              background: 'linear-gradient(135deg, #093f7c 0%, #0056b3 100%)',
+              background: 'var(--primary-navy)',
               color: '#ffffff',
-              padding: '7px 14px',
+              padding: '6px 12px',
               borderRadius: '999px',
               fontSize: '0.80rem',
               fontWeight: 800,
               display: 'none',
               alignItems: 'center',
-              gap: '5px',
-              boxShadow: '0 2px 8px rgba(0, 86, 179, 0.2)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              gap: '4px',
+              boxShadow: '0 4px 10px var(--theme-glow)',
+              border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
-              flexShrink: 0,
-              transition: 'opacity 0.2s ease'
+              flexShrink: 0
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.94'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
           >
             <Sparkles size={12} style={{ color: '#fbbf24' }} />
             <span>{lang === 'ta' ? 'சேர்க்கை' : 'Apply Now'}</span>

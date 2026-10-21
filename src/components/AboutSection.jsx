@@ -62,23 +62,28 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
           {/* Left Column: Headline, Story, 2x2 Features & CTA */}
           <div className="reveal-on-scroll reveal-left">
             
-            {/* Editorial Eyebrow */}
-            <div style={{ marginBottom: '10px' }}>
-              <span style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '0.80rem',
-                fontWeight: 800,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
+            {/* Script Tag */}
+            <div style={{ marginBottom: '6px' }}>
+              <span className="font-script" style={{
+                fontSize: 'clamp(1.75rem, 2.5vw, 2.15rem)',
+                fontWeight: 700,
                 color: '#0056b3',
-                background: '#eff6ff',
-                padding: '4px 12px',
-                borderRadius: '999px',
-                border: '1px solid rgba(0, 86, 179, 0.15)'
+                display: 'inline-block',
+                position: 'relative',
+                lineHeight: 1.1
               }}>
-                ✦ {lang === 'ta' ? 'எங்களை பற்றி' : 'About Our Institution'}
+                {lang === 'ta' ? 'எங்களை பற்றி' : 'About Us'}
+                <span style={{
+                  position: 'absolute',
+                  bottom: '2px',
+                  left: '8%',
+                  width: '84%',
+                  height: '7px',
+                  background: '#fde047',
+                  borderRadius: '999px',
+                  zIndex: -1,
+                  opacity: 0.95
+                }} />
               </span>
             </div>
 
@@ -184,30 +189,24 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
             }}>
               <button
                 onClick={onOpenAdmission}
-                className="about-apply-btn"
+                className="shimmer-btn magnetic-btn"
                 style={{
-                  background: 'linear-gradient(135deg, #093f7c 0%, #0056b3 100%)',
+                  background: 'var(--accent-green)',
                   color: '#ffffff',
-                  padding: '12px 24px',
-                  borderRadius: '12px',
+                  padding: '12px 26px',
+                  borderRadius: '999px',
                   fontWeight: 800,
                   fontSize: '0.92rem',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '8px',
-                  boxShadow: '0 4px 14px rgba(9, 63, 124, 0.22)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  gap: '7px',
+                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.2)',
+                  border: 'none',
                   cursor: 'pointer',
-                  transition: 'opacity 0.2s ease, box-shadow 0.2s ease'
+                  transition: 'all 0.25s ease'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = '0.94';
-                  e.currentTarget.style.boxShadow = '0 6px 18px rgba(9, 63, 124, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = '1';
-                  e.currentTarget.style.boxShadow = '0 4px 14px rgba(9, 63, 124, 0.22)';
-                }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}
               >
                 <span>{lang === 'ta' ? 'சேர்க்கை முன்பதிவு' : 'Enrol for New Batch'}</span>
                 <ArrowRight size={16} />
