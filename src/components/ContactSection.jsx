@@ -160,7 +160,7 @@ export default function ContactSection({ lang = 'ta' }) {
                 {/* Phone */}
                 <a
                   href={`tel:${tuitionData.phones[0]}`}
-                  className="contact-info-card magnetic-btn"
+                  className="contact-info-card"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -172,7 +172,7 @@ export default function ContactSection({ lang = 'ta' }) {
                     padding: '12px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.15)',
-                    transition: 'all 0.2s ease'
+                    transition: 'background-color 0.2s ease'
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.18)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
@@ -205,7 +205,7 @@ export default function ContactSection({ lang = 'ta' }) {
                   href={`https://wa.me/${tuitionData.whatsappNumber}?text=Hi%20Demo%20Tuition%20Centre,%20I%20want%20to%20know%20about%20admissions.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="contact-info-card magnetic-btn"
+                  className="contact-info-card"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -217,7 +217,7 @@ export default function ContactSection({ lang = 'ta' }) {
                     padding: '12px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.15)',
-                    transition: 'all 0.2s ease'
+                    transition: 'background-color 0.2s ease'
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.18)'}
                   onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
@@ -531,6 +531,13 @@ export default function ContactSection({ lang = 'ta' }) {
       </div>
 
       <style>{`
+        .contact-info-card {
+          transform: none !important;
+          transition: background-color 0.2s ease !important;
+        }
+        .contact-info-card:hover {
+          transform: none !important;
+        }
         @media (min-width: 960px) {
           .contact-split-grid {
             grid-template-columns: 1.1fr 0.9fr !important;

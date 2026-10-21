@@ -334,7 +334,7 @@ export default function Hero({ lang, onOpenAdmission }) {
           min-height: 590px;
         }
         .hero-inner-container {
-          padding: 44px 24px;
+          padding: 48px 32px 48px clamp(44px, 5.5vw, 88px);
         }
         .hero-left-content {
           position: relative;
@@ -411,10 +411,9 @@ export default function Hero({ lang, onOpenAdmission }) {
           align-items: center;
           text-align: center;
           gap: 8px;
-          transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .hero-badge-col:hover {
-          transform: translateY(-4px);
+          transform: none;
         }
         .hero-badge-icon {
           width: 46px;
@@ -425,10 +424,9 @@ export default function Hero({ lang, onOpenAdmission }) {
           justify-content: center;
           margin: 0 auto;
           flex-shrink: 0;
-          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
         }
         .hero-badge-col:hover .hero-badge-icon {
-          transform: scale(1.1) translateY(-2px);
+          transform: none;
         }
         .hero-badge-text {
           font-size: 0.76rem;
@@ -437,10 +435,9 @@ export default function Hero({ lang, onOpenAdmission }) {
           line-height: 1.3;
           text-align: center;
           text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
-          transition: color 0.2s ease;
         }
         .hero-badge-col:hover .hero-badge-text {
-          color: #0056b3;
+          color: #003B73;
         }
 
         .hero-actions-container {
