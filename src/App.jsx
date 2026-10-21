@@ -14,6 +14,10 @@ import AdmissionModal from './components/AdmissionModal';
 import MobileBottomBar from './components/MobileBottomBar';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { useScrollReveal } from './utils/useScrollReveal';
+import { useSmoothScroll } from './utils/useSmoothScroll';
+import { useAgencyMotion } from './utils/useAgencyMotion';
+import ScrollProgressBar from './components/ScrollProgressBar';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [lang, setLang] = useState('ta'); // Default to Tamil ('ta')
@@ -34,11 +38,19 @@ function App() {
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // Initialize smooth scroll-triggered animations
+  // Initialize Lenis smooth scroll and agency physics
+  useSmoothScroll();
   useScrollReveal();
+  useAgencyMotion();
 
   return (
     <div className="app-container">
+      {/* Top Subtle Reading Progress Indicator */}
+      <ScrollProgressBar />
+
+      {/* Desktop Agency Custom Cursor Follower */}
+      <CustomCursor />
+
       {/* Header with Nav, Language Toggle & Theme Switcher */}
       <Header
         lang={lang}

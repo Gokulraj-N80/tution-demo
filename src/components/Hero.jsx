@@ -76,7 +76,7 @@ export default function Hero({ lang, onOpenAdmission }) {
               </span>
             </div>
 
-            {/* Main Bold Headline with 2 Clean Explicit Single Lines */}
+            {/* Main Bold Headline with Kinetic Text Overflow Line Masking */}
             <h1 className="hero-main-h1" style={{
               fontWeight: 900,
               fontFamily: 'var(--font-heading)',
@@ -88,29 +88,43 @@ export default function Hero({ lang, onOpenAdmission }) {
             }}>
               {lang === 'ta' ? (
                 <>
-                  <span className="hero-h1-line hero-h1-line-1" style={{ display: 'block', color: 'var(--primary-navy)' }}>
-                    மாணவர்களின்
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-1" style={{ animationDelay: '0.12s', color: 'var(--primary-navy)' }}>
+                      மாணவர்களின்
+                    </span>
                   </span>
-                  <span className="hero-h1-line hero-h1-line-2" style={{ display: 'block', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
-                    கல்வி மேன்மைக்கும்
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-2" style={{ animationDelay: '0.24s', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
+                      கல்வி மேன்மைக்கும்
+                    </span>
                   </span>
-                  <span className="hero-h1-line hero-h1-line-3" style={{ display: 'block', marginTop: '4px', color: 'var(--primary-navy)' }}>
-                    100% தேர்ச்சிக்கும்
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-3" style={{ animationDelay: '0.36s', marginTop: '4px', color: 'var(--primary-navy)' }}>
+                      100% தேர்ச்சிக்கும்
+                    </span>
                   </span>
-                  <span className="hero-h1-line hero-h1-line-4" style={{ display: 'block', color: 'var(--primary-navy)' }}>
-                    முழு வழிகாட்டல்!
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-4" style={{ animationDelay: '0.48s', color: 'var(--primary-navy)' }}>
+                      முழு வழிகாட்டல்!
+                    </span>
                   </span>
                 </>
               ) : (
                 <>
-                  <span className="hero-h1-line hero-h1-line-1" style={{ display: 'block', color: 'var(--primary-navy)' }}>
-                    Empowering Students with
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-1" style={{ animationDelay: '0.12s', color: 'var(--primary-navy)' }}>
+                      Empowering Students with
+                    </span>
                   </span>
-                  <span className="hero-h1-line hero-h1-line-2" style={{ display: 'block', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
-                    Academic Excellence
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-2" style={{ animationDelay: '0.24s', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
+                      Academic Excellence
+                    </span>
                   </span>
-                  <span className="hero-h1-line hero-h1-line-3" style={{ display: 'block', color: 'var(--primary-navy)' }}>
-                    & Top Scores!
+                  <span className="text-line-mask">
+                    <span className="text-line-inner hero-h1-line hero-h1-line-3" style={{ animationDelay: '0.36s', color: 'var(--primary-navy)' }}>
+                      & Top Scores!
+                    </span>
                   </span>
                 </>
               )}
@@ -197,7 +211,7 @@ export default function Hero({ lang, onOpenAdmission }) {
             {/* Primary Enroll Button */}
             <button
               onClick={onOpenAdmission}
-              className="hero-enroll-btn shimmer-btn"
+              className="hero-enroll-btn shimmer-btn magnetic-btn"
               style={{
                 width: '100%',
                 background: 'var(--theme-gradient)',
@@ -237,7 +251,7 @@ export default function Hero({ lang, onOpenAdmission }) {
               {/* Call Button */}
               <a
                 href="tel:9876543210"
-                className="hero-call-btn"
+                className="hero-call-btn magnetic-btn"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -273,7 +287,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                 href="https://wa.me/919876543210?text=Hello%20Demo%20Tuition%20Centre,%20I%20want%20to%20enquire%20about%20admissions"
                 target="_blank"
                 rel="noreferrer"
-                className="hero-btn-wa"
+                className="hero-btn-wa magnetic-btn"
                 style={{
                   display: 'flex',
                   alignItems: 'center',

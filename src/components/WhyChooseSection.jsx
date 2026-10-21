@@ -131,7 +131,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
         }}>
           
           {/* Card 1 (Spans 7 Cols / Mobile: Span 2): Dedicated PG Faculty Hero Card */}
-          <div className="why-bento-card bento-hero-card reveal-on-scroll reveal-left stagger-1 hover-lift" style={{
+          <div className="why-bento-card bento-hero-card spotlight-card tilt-card reveal-on-scroll reveal-left stagger-1 hover-lift" style={{
             gridColumn: 'span 7',
             background: 'var(--theme-gradient)',
             color: '#ffffff',
@@ -231,7 +231,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           </div>
 
           {/* Card 2 (Spans 5 Cols / Mobile: Span 1): Separate Batches */}
-          <div className="why-bento-card reveal-on-scroll reveal-right stagger-2 hover-lift" style={{
+          <div className="why-bento-card spotlight-card tilt-card reveal-on-scroll reveal-right stagger-2 hover-lift" style={{
             gridColumn: 'span 5',
             background: 'linear-gradient(135deg, #f0fdf4 0%, #e6f7ef 100%)',
             borderRadius: '26px',
@@ -310,7 +310,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           </div>
 
           {/* Card 3 (Spans 4 Cols / Mobile: Span 1): March Night Study Camps */}
-          <div className="why-bento-card reveal-on-scroll stagger-3 hover-lift" style={{
+          <div className="why-bento-card spotlight-card tilt-card reveal-on-scroll stagger-3 hover-lift" style={{
             gridColumn: 'span 4',
             background: 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)',
             borderRadius: '26px',
@@ -388,7 +388,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           </div>
 
           {/* Card 4 (Spans 4 Cols / Mobile: Span 1): Weekly Sunday Blueprint Tests */}
-          <div className="why-bento-card reveal-on-scroll stagger-4 hover-lift" style={{
+          <div className="why-bento-card spotlight-card tilt-card reveal-on-scroll stagger-4 hover-lift" style={{
             gridColumn: 'span 4',
             background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
             borderRadius: '26px',
@@ -466,7 +466,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           </div>
 
           {/* Card 5 (Spans 4 Cols / Mobile: Span 1): Affordable Transparent Fees */}
-          <div className="why-bento-card reveal-on-scroll stagger-5 hover-lift" style={{
+          <div className="why-bento-card spotlight-card tilt-card reveal-on-scroll stagger-5 hover-lift" style={{
             gridColumn: 'span 4',
             background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
             borderRadius: '26px',
@@ -598,7 +598,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
 
             <button
               onClick={onOpenAdmission}
-              className="shimmer-btn why-comp-cta-btn"
+              className="shimmer-btn why-comp-cta-btn magnetic-btn"
               style={{
                 background: 'var(--accent-green)',
                 color: '#ffffff',

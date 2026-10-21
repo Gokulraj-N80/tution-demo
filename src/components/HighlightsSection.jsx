@@ -157,7 +157,7 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
           alignItems: 'start'
         }} className="highlights-split-layout">
           
-          {/* Left Column: Sticky Trust Showcase Card */}
+          {/* Left Column: Sticky Trust Showcase Card with Spotlight */}
           <div style={{
             background: '#ffffff',
             borderRadius: '24px',
@@ -167,7 +167,7 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
             position: 'sticky',
             top: '100px',
             alignSelf: 'start'
-          }} className="highlights-trust-card reveal-on-scroll reveal-left hover-lift">
+          }} className="highlights-trust-card spotlight-card reveal-on-scroll reveal-left hover-lift">
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -214,7 +214,7 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
                 : 'Our structured approach combines dedicated subject teachers, regular test evaluations, disciplined separate batches, and night study camps to ensure 100% board exam success.'}
             </p>
 
-            {/* 2 Key Stats Box */}
+            {/* 2 Key Stats Box with Dynamic Counter Animation */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -227,7 +227,11 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
                 borderRadius: '14px',
                 border: '1px solid #e2e8f0'
               }}>
-                <div style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--primary-navy)', fontFamily: 'var(--font-heading)' }}>
+                <div
+                  style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--primary-navy)', fontFamily: 'var(--font-heading)' }}
+                  data-counter="100"
+                  data-counter-suffix="%"
+                >
                   100%
                 </div>
                 <div style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 700, marginTop: '2px' }}>
@@ -241,7 +245,11 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
                 borderRadius: '14px',
                 border: '1px solid #e2e8f0'
               }}>
-                <div style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--accent-green)', fontFamily: 'var(--font-heading)' }}>
+                <div
+                  style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--accent-green)', fontFamily: 'var(--font-heading)' }}
+                  data-counter="567"
+                  data-counter-suffix="/600"
+                >
                   567/600
                 </div>
                 <div style={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 700, marginTop: '2px' }}>
@@ -250,10 +258,10 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
               </div>
             </div>
 
-            {/* Quick Enrol CTA */}
+            {/* Quick Enrol CTA with Magnetic Pull */}
             <button
               onClick={onOpenAdmission}
-              className="shimmer-btn"
+              className="shimmer-btn magnetic-btn"
               style={{
                 width: '100%',
                 background: 'var(--primary-navy)',
@@ -288,7 +296,7 @@ export default function HighlightsSection({ lang = 'ta', onOpenAdmission }) {
             {highlights.map((item, idx) => (
               <div
                 key={idx}
-                className={`highlight-card-row reveal-on-scroll reveal-right stagger-${idx + 1} hover-lift`}
+                className={`highlight-card-row spotlight-card reveal-on-scroll reveal-right stagger-${idx + 1} hover-lift`}
                 style={{
                   background: '#ffffff',
                   borderRadius: '22px',

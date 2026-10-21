@@ -319,7 +319,7 @@ export default function CoursesSection({ lang = 'ta', onOpenAdmission }) {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`courses-filter-btn ${isActive ? 'active' : ''}`}
+                className={`courses-filter-btn magnetic-btn ${isActive ? 'active' : ''}`}
               >
                 <span>{lang === 'ta' ? cat.labelTa : cat.labelEn}</span>
                 {cat.id !== 'all' && (
@@ -338,7 +338,7 @@ export default function CoursesSection({ lang = 'ta', onOpenAdmission }) {
             <div
               key={c.id || i}
               onClick={() => handleCardClick(c.name)}
-              className={`course-image-card reveal-on-scroll reveal-scale stagger-${(i % 4) + 1} hover-lift`}
+              className={`course-image-card spotlight-card tilt-card reveal-on-scroll reveal-scale stagger-${(i % 4) + 1} hover-lift`}
             >
               {/* Image Banner */}
               <div className="course-card-img-wrap hover-zoom-container">
@@ -399,7 +399,7 @@ export default function CoursesSection({ lang = 'ta', onOpenAdmission }) {
                       e.stopPropagation();
                       handleCardClick(c.name);
                     }}
-                    className="course-action-btn"
+                    className="course-action-btn magnetic-btn"
                   >
                     <span>{lang === 'ta' ? 'விவரம் & சேர்க்கை' : 'Enrol & Details'}</span>
                     <ArrowRight size={14} className="course-btn-arrow" />

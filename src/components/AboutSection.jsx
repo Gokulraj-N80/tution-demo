@@ -121,7 +121,7 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
                 : 'Since 2013, Demo Tuition Centre provides premier academic coaching with dedicated Post-Graduate specialist teachers across multiple modern campuses.'}
             </p>
 
-            {/* 2x2 Feature Grid */}
+            {/* 2x2 Feature Grid with Dynamic Spotlight Cursor Glow */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
@@ -141,9 +141,9 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '12px',
-                    transition: 'all 0.2s ease'
+                    transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
-                  className={`about-feature-card hover-lift stagger-${idx + 1}`}
+                  className={`about-feature-card spotlight-card hover-lift stagger-${idx + 1}`}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                     e.currentTarget.style.borderColor = 'var(--primary-blue)';
@@ -189,7 +189,7 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
             }}>
               <button
                 onClick={onOpenAdmission}
-                className="shimmer-btn"
+                className="shimmer-btn magnetic-btn"
                 style={{
                   background: 'var(--accent-green)',
                   color: '#ffffff',
@@ -227,7 +227,7 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
 
           </div>
 
-          {/* Right Column: Classroom Photo with Floating Badges */}
+          {/* Right Column: Classroom Photo with Floating Badges & Curtain Reveal */}
           <div style={{ position: 'relative' }} className="about-image-wrapper reveal-on-scroll reveal-right">
             
             {/* Ambient Background Glow */}
@@ -243,20 +243,22 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
               pointerEvents: 'none'
             }} />
 
-            {/* Rounded Photo Container */}
-            <div style={{
-              position: 'relative',
-              zIndex: 1,
-              borderRadius: '24px',
-              overflow: 'hidden',
-              boxShadow: '0 18px 40px -10px var(--theme-glow)',
-              border: '2px solid #d0e7fb',
-              background: 'var(--primary-navy)'
-            }}>
+            {/* Rounded Photo Container with Agency Curtain Mask */}
+            <div
+              className="curtain-reveal-box"
+              style={{
+                position: 'relative',
+                zIndex: 1,
+                borderRadius: '24px',
+                boxShadow: '0 18px 40px -10px var(--theme-glow)',
+                border: '2px solid #d0e7fb',
+                background: 'var(--primary-navy)'
+              }}
+            >
               <img
                 src="/images/faculty_classroom.jpg"
                 alt="Students learning in Demo Tuition Centre classroom"
-                className="about-classroom-img"
+                className="about-classroom-img curtain-image"
                 style={{
                   width: '100%',
                   height: '345px',
@@ -375,14 +377,18 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
                 }}
                 className="about-stat-col"
               >
-                <div style={{
-                  fontSize: '1.55rem',
-                  fontWeight: 900,
-                  fontFamily: 'var(--font-heading)',
-                  color: i % 2 === 0 ? '#093f7c' : '#00875a',
-                  lineHeight: 1.2,
-                  marginBottom: '3px'
-                }}>
+                <div
+                  style={{
+                    fontSize: '1.55rem',
+                    fontWeight: 900,
+                    fontFamily: 'var(--font-heading)',
+                    color: i % 2 === 0 ? '#093f7c' : '#00875a',
+                    lineHeight: 1.2,
+                    marginBottom: '3px'
+                  }}
+                  {...(i === 0 ? { 'data-counter': '13', 'data-counter-suffix': '+ Years' } : {})}
+                  {...(i === 1 ? { 'data-counter': '100', 'data-counter-suffix': '%' } : {})}
+                >
                   {s.num}
                 </div>
                 <div style={{

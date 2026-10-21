@@ -30,17 +30,20 @@ export default function NightCampSection({ lang, onOpenAdmission }) {
       position: 'relative',
       overflow: 'hidden'
     }}>
-      {/* Background glow */}
-      <div style={{
-        position: 'absolute',
-        top: '20%',
-        right: '10%',
-        width: '400px',
-        height: '400px',
-        background: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
-        borderRadius: '50%',
-        pointerEvents: 'none'
-      }} />
+      {/* Background glow with breathing nebula animation */}
+      <div
+        className="animate-nebula"
+        style={{
+          position: 'absolute',
+          top: '20%',
+          right: '10%',
+          width: '400px',
+          height: '400px',
+          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, transparent 70%)',
+          borderRadius: '50%',
+          pointerEvents: 'none'
+        }}
+      />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
@@ -130,7 +133,7 @@ export default function NightCampSection({ lang, onOpenAdmission }) {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
               <button
                 onClick={onOpenAdmission}
-                className="btn-gold"
+                className="btn-gold magnetic-btn"
                 style={{ padding: '15px 30px', fontSize: '1rem' }}
               >
                 <Sparkles size={18} />
@@ -138,7 +141,7 @@ export default function NightCampSection({ lang, onOpenAdmission }) {
               </button>
               <a
                 href={`tel:${tuitionData.phones[0]}`}
-                className="btn-secondary"
+                className="btn-secondary magnetic-btn"
                 style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', borderColor: 'rgba(255, 255, 255, 0.2)' }}
               >
                 <span>Call: {tuitionData.displayPhones[0]}</span>
@@ -147,17 +150,21 @@ export default function NightCampSection({ lang, onOpenAdmission }) {
 
           </div>
 
-          {/* Right Column: AI Visual Showcase */}
+          {/* Right Column: AI Visual Showcase with Curtain Reveal */}
           <div style={{ position: 'relative' }}>
-            <div style={{
-              borderRadius: '24px',
-              overflow: 'hidden',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-              border: '2px solid rgba(255, 255, 255, 0.15)',
-            }}>
+            <div
+              className="curtain-reveal-box"
+              style={{
+                borderRadius: '24px',
+                overflow: 'hidden',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                border: '2px solid rgba(255, 255, 255, 0.15)',
+              }}
+            >
               <img
                 src="/images/night_camp.jpg"
                 alt="Demo Tuition Night Study Camp"
+                className="curtain-image"
                 style={{ width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
               />
             </div>

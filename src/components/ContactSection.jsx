@@ -85,7 +85,7 @@ export default function ContactSection({ lang = 'ta' }) {
           color: '#ffffff',
           position: 'relative',
           overflow: 'hidden'
-        }} className="contact-main-card">
+        }} className="contact-main-card spotlight-card">
           
           {/* Subtle Background Circles */}
           <div style={{
@@ -160,7 +160,7 @@ export default function ContactSection({ lang = 'ta' }) {
                 {/* Phone */}
                 <a
                   href={`tel:${tuitionData.phones[0]}`}
-                  className="contact-info-card"
+                  className="contact-info-card magnetic-btn"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -205,7 +205,7 @@ export default function ContactSection({ lang = 'ta' }) {
                   href={`https://wa.me/${tuitionData.whatsappNumber}?text=Hi%20Demo%20Tuition%20Centre,%20I%20want%20to%20know%20about%20admissions.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="contact-info-card"
+                  className="contact-info-card magnetic-btn"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -494,7 +494,7 @@ export default function ContactSection({ lang = 'ta' }) {
                   {/* Submit via WhatsApp */}
                   <button
                     type="submit"
-                    className="contact-submit-btn"
+                    className="contact-submit-btn magnetic-btn shimmer-btn"
                     style={{
                       width: '100%',
                       background: '#00875a',

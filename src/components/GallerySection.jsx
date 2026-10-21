@@ -196,7 +196,7 @@ export default function GallerySection({ lang = 'ta' }) {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className="gallery-filter-btn"
+                className="gallery-filter-btn magnetic-btn"
                 style={{
                   background: isSelected ? 'var(--primary-navy)' : '#ffffff',
                   color: isSelected ? '#ffffff' : '#334155',
@@ -243,7 +243,7 @@ export default function GallerySection({ lang = 'ta' }) {
                 aspectRatio: '16/11',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
-              className={`gallery-card-hover reveal-on-scroll stagger-${(idx % 6) + 1}`}
+              className={`gallery-card-hover spotlight-card tilt-card reveal-on-scroll stagger-${(idx % 6) + 1}`}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
                 e.currentTarget.style.borderColor = 'var(--primary-blue)';

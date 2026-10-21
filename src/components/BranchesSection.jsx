@@ -166,7 +166,7 @@ export default function BranchesSection({ lang = 'ta', onOpenAdmission }) {
                 justifyContent: 'space-between',
                 position: 'relative'
               }}
-              className={`branch-card-item reveal-on-scroll stagger-${bIdx + 1}`}
+              className={`branch-card-item spotlight-card tilt-card reveal-on-scroll stagger-${bIdx + 1}`}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
                 e.currentTarget.style.borderColor = 'var(--primary-blue)';
@@ -387,7 +387,7 @@ export default function BranchesSection({ lang = 'ta', onOpenAdmission }) {
                   href={`https://maps.google.com/?q=${encodeURIComponent(b.mapQuery)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="branch-action-btn branch-btn-maps"
+                  className="branch-action-btn branch-btn-maps magnetic-btn"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -421,7 +421,7 @@ export default function BranchesSection({ lang = 'ta', onOpenAdmission }) {
                 {/* 2. Call Button */}
                 <a
                   href={`tel:${b.phone.replace(/\s+/g, '')}`}
-                  className="branch-action-btn branch-btn-call"
+                  className="branch-action-btn branch-btn-call magnetic-btn"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -457,7 +457,7 @@ export default function BranchesSection({ lang = 'ta', onOpenAdmission }) {
                   href={`https://wa.me/91${b.phone.replace(/\s+/g, '')}?text=Hello%20Demo%20Tuition%20Centre,%20I%20want%20to%20enquire%20about%20${encodeURIComponent(b.titleEn)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="branch-action-btn branch-btn-wa"
+                  className="branch-action-btn branch-btn-wa magnetic-btn"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',

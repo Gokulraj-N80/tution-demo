@@ -159,7 +159,7 @@ export default function Header({ lang, setLang, theme = 'royal-blue', setTheme, 
           {/* Apply Now Pill Button (Desktop Only) */}
           <button
             onClick={onOpenAdmission}
-            className="desktop-apply-btn"
+            className="desktop-apply-btn shimmer-btn magnetic-btn"
             style={{
               background: 'var(--primary-navy)',
               color: '#ffffff',

@@ -117,7 +117,7 @@ export default function TeachersSection({ lang = 'ta', onOpenAdmission }) {
           {teachers.map((t, idx) => (
             <div
               key={idx}
-              className={`faculty-profile-card hover-lift reveal-on-scroll stagger-${idx + 1} ${t.isLead ? 'is-lead-director-card' : ''}`}
+              className={`faculty-profile-card spotlight-card tilt-card hover-lift reveal-on-scroll stagger-${idx + 1} ${t.isLead ? 'is-lead-director-card' : ''}`}
             >
               {/* Card Top Row: Avatar on Left + Details on Right */}
               <div className="faculty-card-top-row">
@@ -168,7 +168,7 @@ export default function TeachersSection({ lang = 'ta', onOpenAdmission }) {
               <div className="faculty-actions-row">
                 <a
                   href={`tel:${t.phone.replace(/\s+/g, '')}`}
-                  className="faculty-btn-call"
+                  className="faculty-btn-call magnetic-btn"
                   title={`Call ${t.nameEn}`}
                 >
                   <Phone size={14} className="action-icon" />
@@ -179,7 +179,7 @@ export default function TeachersSection({ lang = 'ta', onOpenAdmission }) {
                   href={`https://wa.me/91${t.phone.replace(/\s+/g, '')}?text=Hello%20${encodeURIComponent(t.nameEn)}%20Sir%20-%20Admission%20Enquiry`}
                   target="_blank"
                   rel="noreferrer"
-                  className="faculty-btn-wa"
+                  className="faculty-btn-wa magnetic-btn"
                   title={`WhatsApp ${t.nameEn}`}
                 >
                   <WhatsAppIcon size={14} />
