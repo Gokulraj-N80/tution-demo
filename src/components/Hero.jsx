@@ -334,13 +334,13 @@ export default function Hero({ lang, onOpenAdmission }) {
           min-height: 590px;
         }
         .hero-inner-container {
-          padding: 38px 24px;
+          padding: 44px 24px;
         }
         .hero-left-content {
           position: relative;
           z-index: 2;
-          max-width: 780px;
-          width: 65%;
+          max-width: 860px;
+          width: 62%;
         }
         .hero-left-content::before {
           content: "";
@@ -348,7 +348,7 @@ export default function Hero({ lang, onOpenAdmission }) {
           left: -40px;
           top: -30px;
           width: 120%;
-          max-width: 740px;
+          max-width: 820px;
           height: calc(100% + 60px);
           background: linear-gradient(
             90deg,

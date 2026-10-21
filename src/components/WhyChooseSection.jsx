@@ -126,7 +126,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           display: 'grid',
           gridTemplateColumns: 'repeat(12, 1fr)',
           gap: '22px',
-          maxWidth: '1160px',
+          maxWidth: '100%',
           margin: '0 auto 48px auto'
         }}>
           
@@ -550,7 +550,7 @@ export default function WhyChooseSection({ lang = 'ta', onOpenAdmission }) {
           background: 'var(--theme-footer-bg)',
           borderRadius: '26px',
           padding: '36px 32px',
-          maxWidth: '1160px',
+          maxWidth: '100%',
           margin: '0 auto',
           boxShadow: '0 15px 40px var(--theme-glow)',
           color: '#ffffff',

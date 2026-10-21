@@ -299,15 +299,22 @@ export default function Header({ lang, setLang, theme = 'royal-blue', setTheme, 
 
       <style>{`
         .header-inner-container {
-          max-width: 1380px;
+          max-width: 1480px;
           width: 100%;
           margin: 0 auto;
-          padding: 8px 16px;
+          padding: 8px 32px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           box-sizing: border-box;
           gap: 10px;
+        }
+
+        @media (min-width: 1600px) {
+          .header-inner-container {
+            max-width: 1620px;
+            padding: 8px 56px;
+          }
         }
 
         @media (min-width: 1120px) {

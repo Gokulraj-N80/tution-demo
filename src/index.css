@@ -147,15 +147,29 @@ section[id] {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 24px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 44px;
+    max-width: 1480px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1620px;
+    padding: 0 56px;
   }
 }
 

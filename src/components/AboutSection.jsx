@@ -114,7 +114,7 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
               color: '#475569',
               lineHeight: 1.6,
               marginBottom: '22px',
-              maxWidth: '600px'
+              maxWidth: '680px'
             }}>
               {lang === 'ta'
                 ? 'Demo Tuition Centre 2013 முதல் 6 முதல் 12ம் வகுப்பு வரை முதுகலை பட்டதாரி ஆசிரியர்களைக் கொண்டு தரமான கல்வியை அர்ப்பணிப்புடன் வழங்கி வருகிறது.'
@@ -127,7 +127,7 @@ export default function AboutSection({ lang = 'ta', onOpenAdmission }) {
               gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '14px',
               marginBottom: '24px',
-              maxWidth: '580px'
+              maxWidth: '100%'
             }} className="about-2x2-features">
               {features.map((item, idx) => (
                 <div

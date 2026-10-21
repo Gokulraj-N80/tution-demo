@@ -269,14 +269,15 @@ export default function TeachersSection({ lang = 'ta', onOpenAdmission }) {
           flex-wrap: wrap;
           justifyContent: center;
           gap: 24px;
-          max-width: 1160px;
+          max-width: 100%;
+          width: 100%;
           margin: 0 auto;
         }
 
         .faculty-profile-card {
-          flex: 0 1 345px;
+          flex: 1 1 320px;
           width: 100%;
-          max-width: 360px;
+          max-width: 400px;
           min-width: 280px;
           background: #ffffff;
           border: 1.5px solid var(--card-border);
