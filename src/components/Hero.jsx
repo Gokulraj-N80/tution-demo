@@ -39,7 +39,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                 }}
               >
                 <span style={{ position: 'relative', zIndex: 2 }}>
-                  {lang === 'ta' ? 'உங்கள் எதிர்காலத்தை பிரகாசமாக்குங்கள்' : 'Build Your Future With'}
+                  {lang === 'ta' ? 'உங்கள் எதிர்காலத்தை பிரகாசமாக்குங்கள்' : 'Shaping Bright Futures Since 2013'}
                 </span>
                 
                 {/* Smooth Marker Brush Stroke Underline */}
@@ -159,7 +159,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                   <Users size={21} color="#ffffff" />
                 </div>
                 <span className="hero-badge-text">
-                  {lang === 'ta' ? 'ஆண், பெண் தனித்தனி வகுப்பு' : 'Separate Batches for Boys & Girls'}
+                  {lang === 'ta' ? 'ஆண், பெண் தனித்தனி வகுப்பு' : 'Separate Batches (Boys & Girls)'}
                 </span>
               </div>
 
@@ -172,7 +172,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                   <Home size={21} color="#ffffff" />
                 </div>
                 <span className="hero-badge-text">
-                  {lang === 'ta' ? 'வீட்டுக்கே வந்து கற்பிக்கும் வசதி' : 'Doorstep Home Tuition Available'}
+                  {lang === 'ta' ? 'வீட்டுக்கே வந்து கற்பிக்கும் வசதி' : 'Doorstep Home Tutoring'}
                 </span>
               </div>
 
@@ -185,7 +185,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                   <FileText size={21} color="#ffffff" />
                 </div>
                 <span className="hero-badge-text">
-                  {lang === 'ta' ? 'மார்ச் இரவு நேர சிறப்பு முகாம்' : 'March Board Exam Night Study Camps'}
+                  {lang === 'ta' ? 'மார்ச் இரவு நேர சிறப்பு முகாம்' : 'March Night Study Camps'}
                 </span>
               </div>
 
@@ -198,7 +198,7 @@ export default function Hero({ lang, onOpenAdmission }) {
                   <UserCheck size={21} color="#ffffff" />
                 </div>
                 <span className="hero-badge-text">
-                  {lang === 'ta' ? 'முதுகலை பட்டதாரி ஆசிரியர்கள்' : 'Dedicated PG Specialist Teachers'}
+                  {lang === 'ta' ? 'முதுகலை பட்டதாரி ஆசிரியர்கள்' : 'Dedicated PG Faculty'}
                 </span>
               </div>
 
@@ -310,6 +310,25 @@ export default function Hero({ lang, onOpenAdmission }) {
                 <WhatsAppIcon size={17} style={{ flexShrink: 0 }} />
                 <span style={{ whiteSpace: 'nowrap' }}>WhatsApp</span>
               </a>
+            </div>
+
+            {/* Social Trust Line */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              marginTop: '4px',
+              fontSize: '0.76rem',
+              fontWeight: 700,
+              color: '#334155'
+            }}>
+              <span style={{ color: '#f59e0b', fontSize: '0.84rem' }}>★★★★★</span>
+              <span>
+                {lang === 'ta'
+                  ? '2013 முதல் 100% தேர்ச்சி சாதனை • 5,000+ மாணவர்கள்'
+                  : '100% Pass Record Since 2013 • Over 5,000+ Students Mentored'}
+              </span>
             </div>
 
           </div>
