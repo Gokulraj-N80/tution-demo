@@ -19,8 +19,20 @@ import { useAgencyMotion } from './utils/useAgencyMotion';
 import ScrollProgressBar from './components/ScrollProgressBar';
 
 function App() {
-  const [lang, setLang] = useState('ta'); // Default to Tamil ('ta')
+  const [lang, setLang] = useState(() => {
+    try {
+      return localStorage.getItem('demo_tuition_lang') || 'en';
+    } catch {
+      return 'en';
+    }
+  });
   const [isAdmissionOpen, setIsAdmissionOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('demo_tuition_lang', lang);
+    } catch {}
+  }, [lang]);
   
   // Theme state: 'royal-blue' is the Primary/Default theme (Never deleted)
   const [theme, setTheme] = useState(() => {
