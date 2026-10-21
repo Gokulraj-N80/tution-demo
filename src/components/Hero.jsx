@@ -1,8 +1,39 @@
 import React from 'react';
-import { Users, Home, FileText, UserCheck, GraduationCap, Phone, ArrowRight } from 'lucide-react';
+import { Users, Home, FileText, UserCheck, GraduationCap, Phone, ArrowRight, Award, ShieldCheck } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
-export default function Hero({ lang, onOpenAdmission }) {
+export default function Hero({ lang = 'en', onOpenAdmission }) {
+  const pillars = [
+    {
+      icon: <Users size={16} />,
+      title: lang === 'en' ? 'Separate Batches' : 'தனித்தனி வகுப்புகள்',
+      sub: lang === 'en' ? 'Boys & Girls Independent Study' : 'ஆண், பெண் தனித்தனி வகுப்பு',
+      color: '#0056b3',
+      bg: 'rgba(0, 86, 179, 0.08)'
+    },
+    {
+      icon: <Home size={16} />,
+      title: lang === 'en' ? 'Doorstep Tutoring' : 'வீட்டு பயிற்சி வசதி',
+      sub: lang === 'en' ? '1-on-1 Personal Home Coaching' : 'வீட்டுக்கே வந்து கற்பித்தல்',
+      color: '#7c3aed',
+      bg: 'rgba(124, 58, 237, 0.08)'
+    },
+    {
+      icon: <FileText size={16} />,
+      title: lang === 'en' ? 'Night Study Camps' : 'இரவு நேர சிறப்பு முகாம்',
+      sub: lang === 'en' ? 'March Board Exam Intensive' : 'மார்ச் பொதுத்தேர்வு முகாம்',
+      color: '#0284c7',
+      bg: 'rgba(2, 132, 199, 0.08)'
+    },
+    {
+      icon: <UserCheck size={16} />,
+      title: lang === 'en' ? 'PG Specialist Faculty' : 'முதுகலை ஆசிரியர்கள்',
+      sub: lang === 'en' ? 'M.Sc., M.Phil. Subject Mentors' : 'பட்டதாரி ஆசிரியர்கள்',
+      color: '#ea580c',
+      bg: 'rgba(234, 88, 12, 0.08)'
+    }
+  ];
+
   return (
     <section
       id="home"
@@ -17,318 +48,138 @@ export default function Hero({ lang, onOpenAdmission }) {
     >
       <div className="container hero-inner-container" style={{ position: 'relative', zIndex: 2, width: '100%' }}>
         
-        {/* Main Content Wrapper */}
+        {/* Main Content Column */}
         <div className="hero-left-content">
           
-          {/* Top Headline Box (Full Width & Perfectly Centered on Mobile with Top Gap) */}
-          <div className="hero-headline-center-box">
-            
-            {/* Tagline with Artistic Golden Highlight Underline */}
-            <div style={{ marginBottom: '10px' }}>
-              <span
-                className={lang === 'ta' ? 'hero-tagline-ta' : 'font-script hero-tagline-en'}
-                style={{
-                  fontWeight: 800,
-                  color: '#c2410c',
-                  display: 'inline-block',
-                  position: 'relative',
-                  lineHeight: 1.35,
-                  isolation: 'isolate',
-                  padding: '2px 4px',
-                  textShadow: '0 1px 2px rgba(255, 255, 255, 0.95)'
-                }}
-              >
-                <span style={{ position: 'relative', zIndex: 2 }}>
-                  {lang === 'ta' ? 'உங்கள் எதிர்காலத்தை பிரகாசமாக்குங்கள்' : 'Build Your Future With'}
-                </span>
-                
-                {/* Smooth Marker Brush Stroke Underline */}
-                <svg
-                  className="hero-tagline-brush"
-                  viewBox="0 0 320 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
-                  style={{
-                    position: 'absolute',
-                    bottom: '-4px',
-                    left: 0,
-                    width: '100%',
-                    height: '11px',
-                    zIndex: 1,
-                    pointerEvents: 'none'
-                  }}
-                >
-                  {/* Soft Background Highlighter Layer */}
-                  <path
-                    d="M2 13C60 4 160 3 318 8C265 14.5 140 16.5 2 13Z"
-                    fill="#FEF08A"
-                    opacity="0.92"
-                  />
-                  {/* Vibrant Core Brush Stroke */}
-                  <path
-                    d="M8 9.5C80 4.5 195 4 312 8.5"
-                    stroke="#FACC15"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                  />
-                </svg>
+          {/* 1. Refined Eyebrow Chip */}
+          <div className="hero-eyebrow-container">
+            <div className="hero-eyebrow-chip">
+              <span className="hero-live-indicator" />
+              <span className="hero-eyebrow-primary">
+                {lang === 'en' ? 'Admissions Open 2025–26' : '2025–26 புதிய சேர்க்கை'}
+              </span>
+              <span className="hero-eyebrow-dot">•</span>
+              <span className="hero-eyebrow-accent">
+                {lang === 'en' ? '100% Board Pass Record' : '100% தேர்ச்சி சாதனை'}
               </span>
             </div>
-
-            {/* Main Bold Headline with Kinetic Text Overflow Line Masking */}
-            <h1 className="hero-main-h1" style={{
-              fontWeight: 900,
-              fontFamily: 'var(--font-heading)',
-              color: 'var(--primary-navy)',
-              lineHeight: 1.15,
-              letterSpacing: '-0.025em',
-              margin: '0 0 20px 0',
-              textShadow: '0 2px 4px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.85)'
-            }}>
-              {lang === 'ta' ? (
-                <>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-1" style={{ animationDelay: '0.12s', color: 'var(--primary-navy)' }}>
-                      மாணவர்களின்
-                    </span>
-                  </span>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-2" style={{ animationDelay: '0.24s', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
-                      கல்வி மேன்மைக்கும்
-                    </span>
-                  </span>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-3" style={{ animationDelay: '0.36s', marginTop: '4px', color: 'var(--primary-navy)' }}>
-                      100% தேர்ச்சிக்கும்
-                    </span>
-                  </span>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-4" style={{ animationDelay: '0.48s', color: 'var(--primary-navy)' }}>
-                      முழு வழிகாட்டல்!
-                    </span>
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-1" style={{ animationDelay: '0.12s', color: 'var(--primary-navy)' }}>
-                      Empowering Students with
-                    </span>
-                  </span>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-2" style={{ animationDelay: '0.24s', color: 'var(--accent-green)', textShadow: '0 2px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85)' }}>
-                      Academic Excellence
-                    </span>
-                  </span>
-                  <span className="text-line-mask">
-                    <span className="text-line-inner hero-h1-line hero-h1-line-3" style={{ animationDelay: '0.36s', color: 'var(--primary-navy)' }}>
-                      & Top Scores!
-                    </span>
-                  </span>
-                </>
-              )}
-            </h1>
-
           </div>
 
-          {/* Middle Left Content (Subtitle & Badges on Left, keeping student on right visible) */}
-          <div className="hero-mid-left-box">
-            {/* Subtitle Paragraph */}
-            <p className="hero-subtitle" style={{
-              color: '#102A43',
-              lineHeight: 1.55,
-              margin: '0 0 16px 0',
-              fontWeight: 700,
-              textShadow: '0 1px 2px rgba(255, 255, 255, 0.9)'
-            }}>
-              {lang === 'ta'
-                ? '6 முதல் 12ம் வகுப்பு வரை (State Board & CBSE), அண்ணா பல்கலைக்கழக பொறியியல் கணிதம் (M1, M2), பாலிடெக்னிக் & டிகிரி கணிதத்திற்கான முதன்மை கல்வி பயிற்சி மையம்.'
-                : 'Premier coaching for 6th–12th Std (State Board & CBSE), Engineering Mathematics (Anna Univ), Diploma & Degree courses with classroom and personal guidance.'}
-            </p>
+          {/* 2. Editorial Display Headline */}
+          <h1 className="hero-editorial-h1">
+            {lang === 'en' ? (
+              <>
+                Empowering Students with{' '}
+                <span className="hero-gradient-text">Academic Excellence</span>{' '}
+                & Top Scores!
+              </>
+            ) : (
+              <>
+                மாணவர்களின்{' '}
+                <span className="hero-gradient-text">கல்வி மேன்மைக்கும்</span>{' '}
+                100% தேர்ச்சிக்கும் முழு வழிகாட்டல்!
+              </>
+            )}
+          </h1>
 
-            {/* 4 Feature Badges */}
-            <div className="hero-four-badges-row">
-              
-              {/* Badge 1: Separate Batches */}
-              <div className="hero-badge-col">
-                <div className="hero-badge-icon" style={{
-                  background: 'linear-gradient(135deg, #00875a 0%, #10b981 100%)',
-                  boxShadow: '0 4px 12px rgba(0, 135, 90, 0.28)'
-                }}>
-                  <Users size={21} color="#ffffff" />
+          {/* 3. Editorial Subtitle */}
+          <p className="hero-editorial-subtitle">
+            {lang === 'en'
+              ? 'Premier coaching for 6th–12th Std (State Board & CBSE), Engineering Mathematics (Anna Univ), Diploma & Degree courses with classroom and personal guidance.'
+              : '6 முதல் 12ம் வகுப்பு வரை (State Board & CBSE), அண்ணா பல்கலைக்கழக பொறியியல் கணிதம் (M1, M2), பாலிடெக்னிக் & டிகிரி கணிதத்திற்கான முதன்மை கல்வி பயிற்சி மையம்.'}
+          </p>
+
+          {/* 4. Bespoke 4-Pillar Glass Bento Grid */}
+          <div className="hero-pillar-bento-grid">
+            {pillars.map((p, idx) => (
+              <div key={idx} className="hero-bento-item">
+                <div className="hero-bento-icon-wrapper" style={{ background: p.bg, color: p.color }}>
+                  {p.icon}
                 </div>
-                <span className="hero-badge-text">
-                  {lang === 'ta' ? 'ஆண், பெண் தனித்தனி வகுப்பு' : 'Separate Batches for Boys & Girls'}
-                </span>
-              </div>
-
-              {/* Badge 2: Doorstep Home Tuition */}
-              <div className="hero-badge-col">
-                <div className="hero-badge-icon" style={{
-                  background: 'linear-gradient(135deg, #5c54db 0%, #7c3aed 100%)',
-                  boxShadow: '0 4px 12px rgba(92, 84, 219, 0.28)'
-                }}>
-                  <Home size={21} color="#ffffff" />
+                <div className="hero-bento-text-box">
+                  <div className="hero-bento-title">{p.title}</div>
+                  <div className="hero-bento-sub">{p.sub}</div>
                 </div>
-                <span className="hero-badge-text">
-                  {lang === 'ta' ? 'வீட்டுக்கே வந்து கற்பிக்கும் வசதி' : 'Doorstep Home Tuition Available'}
-                </span>
               </div>
-
-              {/* Badge 3: March Night Study Camps */}
-              <div className="hero-badge-col">
-                <div className="hero-badge-icon" style={{
-                  background: 'linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%)',
-                  boxShadow: '0 4px 12px rgba(2, 132, 199, 0.28)'
-                }}>
-                  <FileText size={21} color="#ffffff" />
-                </div>
-                <span className="hero-badge-text">
-                  {lang === 'ta' ? 'மார்ச் இரவு நேர சிறப்பு முகாம்' : 'March Board Exam Night Study Camps'}
-                </span>
-              </div>
-
-              {/* Badge 4: Dedicated PG Specialist Teachers */}
-              <div className="hero-badge-col">
-                <div className="hero-badge-icon" style={{
-                  background: 'linear-gradient(135deg, #ea580c 0%, #f97316 100%)',
-                  boxShadow: '0 4px 12px rgba(234, 88, 12, 0.28)'
-                }}>
-                  <UserCheck size={21} color="#ffffff" />
-                </div>
-                <span className="hero-badge-text">
-                  {lang === 'ta' ? 'முதுகலை பட்டதாரி ஆசிரியர்கள்' : 'Dedicated PG Specialist Teachers'}
-                </span>
-              </div>
-
-            </div>
+            ))}
           </div>
 
-          {/* Action CTA Buttons */}
-          <div className="hero-actions-container">
+          {/* 5. Architectural Action Cluster */}
+          <div className="hero-action-cluster">
             
-            {/* Primary Enroll Button */}
+            {/* Primary Enroll CTA */}
             <button
               onClick={onOpenAdmission}
-              className="hero-enroll-btn"
-              style={{
-                width: '100%',
-                background: 'var(--theme-gradient)',
-                color: '#ffffff',
-                borderRadius: '999px',
-                fontWeight: 900,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-                boxShadow: '0 4px 14px var(--theme-glow)',
-                cursor: 'pointer',
-                border: 'none',
-                transition: 'opacity 0.2s ease'
-              }}
-              onMouseEnter={(e) => { 
-                e.currentTarget.style.opacity = '0.94';
-              }}
-              onMouseLeave={(e) => { 
-                e.currentTarget.style.opacity = '1';
-              }}
+              className="hero-cta-primary-btn"
             >
-              <GraduationCap size={20} />
-              <span>{lang === 'ta' ? '2025–26 புதிய வகுப்பில் சேரவும்' : 'Enroll for Batch 2025–26'}</span>
-              <ArrowRight size={16} />
+              <GraduationCap size={19} />
+              <span>{lang === 'en' ? 'Enroll for Batch 2025–26' : '2025–26 புதிய வகுப்பில் சேரவும்'}</span>
+              <ArrowRight size={17} className="hero-arrow-icon" />
             </button>
 
-            {/* Row 2: Call & WhatsApp */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '10px',
-              width: '100%'
-            }}>
-              {/* Call Button */}
-              <a
-                href="tel:9876543210"
-                className="hero-call-btn"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '6px',
-                  background: '#ffffff',
-                  color: 'var(--primary-blue)',
-                  border: '2px solid var(--primary-blue)',
-                  borderRadius: '999px',
-                  padding: '11px 16px',
-                  fontWeight: 900,
-                  fontSize: '0.90rem',
-                  textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0, 86, 179, 0.08)',
-                  transition: 'background-color 0.2s ease',
-                  whiteSpace: 'nowrap'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--primary-light-blue)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#ffffff';
-                }}
-              >
+            {/* Row 2: Direct Call & WhatsApp Contact Duo */}
+            <div className="hero-cta-duo">
+              
+              {/* Call Action */}
+              <a href="tel:9876543210" className="hero-action-call">
                 <Phone size={15} style={{ flexShrink: 0 }} />
-                <span style={{ whiteSpace: 'nowrap' }}>98765 43210</span>
+                <span>98765 43210</span>
               </a>
 
-              {/* WhatsApp Button - Perfectly Centered */}
+              {/* WhatsApp Action */}
               <a
                 href="https://wa.me/919876543210?text=Hello%20Demo%20Tuition%20Centre,%20I%20want%20to%20enquire%20about%20admissions"
                 target="_blank"
                 rel="noreferrer"
-                className="hero-btn-wa"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '6px',
-                  background: '#25D366',
-                  color: '#ffffff',
-                  padding: '11px 16px',
-                  borderRadius: '999px',
-                  fontWeight: 900,
-                  fontSize: '0.90rem',
-                  textDecoration: 'none',
-                  boxShadow: '0 3px 10px rgba(37, 211, 102, 0.3)',
-                  transition: 'background-color 0.2s ease',
-                  whiteSpace: 'nowrap'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#20bd5a';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#25D366';
-                }}
+                className="hero-action-wa"
               >
-                <WhatsAppIcon size={17} style={{ flexShrink: 0 }} />
-                <span style={{ whiteSpace: 'nowrap' }}>WhatsApp</span>
+                <WhatsAppIcon size={16} style={{ flexShrink: 0 }} />
+                <span>WhatsApp</span>
               </a>
+            </div>
+
+            {/* Social Trust Guarantee Strip */}
+            <div className="hero-trust-guarantee">
+              <span className="hero-trust-stars">★★★★★</span>
+              <span className="hero-trust-label">
+                {lang === 'en'
+                  ? '100% Pass Record Since 2013 • Over 5,000+ Students Mentored'
+                  : '2013 முதல் 100% தேர்ச்சி சாதனை • 5,000+ மாணவ மாணவியர்'}
+              </span>
             </div>
 
           </div>
 
         </div>
 
+        {/* 6. Desktop Floating Showcase Card */}
+        <div className="hero-desktop-floating-card">
+          <div className="hero-proof-badge-icon">
+            <Award size={22} color="#0056b3" />
+          </div>
+          <div>
+            <div className="hero-proof-title">100% Pass Record</div>
+            <div className="hero-proof-sub">13+ Consecutive Years Since 2013</div>
+            <div className="hero-proof-tag-row">
+              <span className="hero-proof-pill">State Board & CBSE</span>
+              <span className="hero-proof-pill">Engg. Mathematics</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <style>{`
-        /* Desktop View */
+        /* Desktop Base View */
         .hero-section-custom {
           background-image: url('/images/home_bg.jpg');
           background-size: cover;
           background-position: center right;
           background-repeat: no-repeat;
-          min-height: 590px;
+          min-height: 610px;
         }
         .hero-inner-container {
-          padding: 48px 32px 48px clamp(44px, 5.5vw, 88px);
+          padding: 52px 32px 52px clamp(44px, 5.5vw, 88px);
         }
         .hero-left-content {
           position: relative;
@@ -339,120 +190,301 @@ export default function Hero({ lang, onOpenAdmission }) {
         .hero-left-content::before {
           content: "";
           position: absolute;
-          left: -40px;
-          top: -30px;
+          left: -48px;
+          top: -36px;
           width: 120%;
-          max-width: 820px;
-          height: calc(100% + 60px);
+          max-width: 840px;
+          height: calc(100% + 72px);
           background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.92) 0%,
-            rgba(255, 255, 255, 0.80) 45%,
-            rgba(255, 255, 255, 0.40) 75%,
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.86) 45%,
+            rgba(255, 255, 255, 0.45) 75%,
             rgba(255, 255, 255, 0) 100%
           );
-          border-radius: 24px;
+          border-radius: 28px;
           z-index: -1;
           pointer-events: none;
         }
-        /* Hero Entrance Keyframe Cascade */
-        .hero-headline-center-box {
-          animation: fadeInDown 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+
+        /* 1. Refined Eyebrow Chip */
+        .hero-eyebrow-container {
+          margin-bottom: 14px;
         }
-        .hero-tagline-en, .hero-tagline-ta {
-          font-size: 1.85rem;
-          color: #E85D04;
-          text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8);
-        }
-        .hero-tagline-ta {
-          font-size: 1.35rem;
-          font-family: var(--font-heading);
-          letter-spacing: -0.01em;
-        }
-        .hero-main-h1 {
-          font-size: clamp(2.55rem, 3.8vw, 3.4rem);
-          line-height: 1.15;
-          color: #003B73;
-          text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.85);
-          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-        }
-        .hero-h1-line, .hero-h1-line-1, .hero-h1-line-2, .hero-h1-line-3, .hero-h1-line-4 {
-          white-space: nowrap !important;
-          display: block !important;
-        }
-        .hero-mid-left-box {
-          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
-        }
-        .hero-subtitle {
-          font-size: 0.96rem;
-          max-width: 520px;
-          font-weight: 700;
-          color: #102A43 !important;
-          text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
-        }
-        
-        /* 4 Badges in 1 Single Row on Desktop with Centered Icons */
-        .hero-four-badges-row {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 14px;
-          margin-bottom: 22px;
-          max-width: 560px;
-        }
-        .hero-badge-col {
-          display: flex;
-          flex-direction: column;
+        .hero-eyebrow-chip {
+          display: inline-flex;
           align-items: center;
-          text-align: center;
           gap: 8px;
+          background: rgba(255, 255, 255, 0.95);
+          border: 1px solid rgba(0, 86, 179, 0.18);
+          padding: 6px 14px;
+          border-radius: 999px;
+          box-shadow: 0 2px 10px rgba(0, 86, 179, 0.05);
+          backdrop-filter: blur(8px);
         }
-        .hero-badge-col:hover {
-          transform: none;
-        }
-        .hero-badge-icon {
-          width: 46px;
-          height: 46px;
+        .hero-live-indicator {
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
+          background: #10b981;
+          box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.22);
+          flex-shrink: 0;
+        }
+        .hero-eyebrow-primary {
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.03em;
+          color: #003B73;
+          text-transform: uppercase;
+        }
+        .hero-eyebrow-dot {
+          color: #94a3b8;
+          font-size: 0.75rem;
+        }
+        .hero-eyebrow-accent {
+          font-size: 0.76rem;
+          font-weight: 700;
+          color: #c2410c;
+        }
+
+        /* 2. Editorial Headline */
+        .hero-editorial-h1 {
+          font-size: clamp(2.4rem, 3.7vw, 3.3rem);
+          font-weight: 900;
+          font-family: var(--font-heading);
+          color: #0F172A;
+          line-height: 1.15;
+          letter-spacing: -0.025em;
+          margin: 0 0 16px 0;
+          text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95);
+        }
+        .hero-gradient-text {
+          background: linear-gradient(135deg, #0056b3 0%, #00875a 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline;
+        }
+
+        /* 3. Subtitle */
+        .hero-editorial-subtitle {
+          font-size: 0.98rem;
+          line-height: 1.62;
+          color: #334155;
+          font-weight: 600;
+          max-width: 540px;
+          margin: 0 0 22px 0;
+          text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
+        }
+
+        /* 4. Bento Grid (Replacing the 4 colored dots) */
+        .hero-pillar-bento-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          max-width: 540px;
+          margin-bottom: 24px;
+        }
+        .hero-bento-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(15, 23, 42, 0.08);
+          border-radius: 12px;
+          padding: 10px 12px;
+          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-bento-item:hover {
+          border-color: rgba(0, 86, 179, 0.28);
+          box-shadow: 0 4px 14px rgba(0, 86, 179, 0.08);
+        }
+        .hero-bento-icon-wrapper {
+          width: 34px;
+          height: 34px;
+          border-radius: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 0 auto;
           flex-shrink: 0;
         }
-        .hero-badge-col:hover .hero-badge-icon {
-          transform: none;
-        }
-        .hero-badge-text {
-          font-size: 0.76rem;
-          font-weight: 800;
-          color: #003B73;
-          line-height: 1.3;
-          text-align: center;
-          text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
-        }
-        .hero-badge-col:hover .hero-badge-text {
-          color: #003B73;
-        }
-
-        .hero-actions-container {
+        .hero-bento-text-box {
           display: flex;
           flex-direction: column;
-          gap: 12px;
-          max-width: 480px;
-          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+          gap: 2px;
         }
-        .hero-enroll-btn {
-          padding: 13px 22px;
-          font-size: 0.98rem;
-          transform: none !important;
+        .hero-bento-title {
+          font-size: 0.82rem;
+          font-weight: 800;
+          color: #0f172a;
+          line-height: 1.25;
         }
-        .hero-call-btn, .hero-btn-wa, .hero-wa-btn {
-          padding: 11px 14px;
-          font-size: 0.92rem;
-          transform: none !important;
+        .hero-bento-sub {
+          font-size: 0.69rem;
+          font-weight: 600;
+          color: #64748b;
+          line-height: 1.2;
         }
-        .hero-enroll-btn:hover, .hero-call-btn:hover, .hero-btn-wa:hover, .hero-wa-btn:hover {
-          transform: none !important;
+
+        /* 5. Action Cluster */
+        .hero-action-cluster {
+          display: flex;
+          flex-direction: column;
+          gap: 11px;
+          max-width: 500px;
+        }
+        .hero-cta-primary-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          background: linear-gradient(135deg, #093f7c 0%, #0056b3 100%);
+          color: #ffffff;
+          padding: 13px 24px;
+          border-radius: 12px;
+          font-weight: 800;
+          font-size: 0.96rem;
+          letter-spacing: 0.01em;
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          box-shadow: 0 4px 14px rgba(9, 63, 124, 0.24);
+          cursor: pointer;
+          transition: opacity 0.2s ease, box-shadow 0.2s ease;
+          width: 100%;
+        }
+        .hero-cta-primary-btn:hover {
+          opacity: 0.95;
+          box-shadow: 0 6px 20px rgba(9, 63, 124, 0.32);
+        }
+        .hero-arrow-icon {
+          transition: transform 0.2s ease;
+        }
+        .hero-cta-primary-btn:hover .hero-arrow-icon {
+          transform: translateX(3px);
+        }
+
+        .hero-cta-duo {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+          width: 100%;
+        }
+        .hero-action-call {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          background: #ffffff;
+          color: #093f7c;
+          border: 1.5px solid #cbd5e1;
+          padding: 11px 16px;
+          border-radius: 12px;
+          font-weight: 800;
+          font-size: 0.88rem;
+          text-decoration: none;
+          box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+          transition: border-color 0.2s ease, background 0.2s ease;
+          white-space: nowrap;
+        }
+        .hero-action-call:hover {
+          border-color: #0056b3;
+          background: #f8fafc;
+        }
+        .hero-action-wa {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          background: #f0fdf4;
+          color: #15803d;
+          border: 1.5px solid #bbf7d0;
+          padding: 11px 16px;
+          border-radius: 12px;
+          font-weight: 800;
+          font-size: 0.88rem;
+          text-decoration: none;
+          box-shadow: 0 2px 6px rgba(16, 185, 129, 0.06);
+          transition: background 0.2s ease, border-color 0.2s ease;
+          white-space: nowrap;
+        }
+        .hero-action-wa:hover {
+          background: #dcfce7;
+          border-color: #86efac;
+        }
+
+        .hero-trust-guarantee {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 3px;
+        }
+        .hero-trust-stars {
+          color: #f59e0b;
+          font-size: 0.88rem;
+          letter-spacing: 1px;
+        }
+        .hero-trust-label {
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: #475569;
+        }
+
+        /* 6. Desktop Floating Showcase Card */
+        .hero-desktop-floating-card {
+          display: none;
+        }
+        @media (min-width: 1140px) {
+          .hero-desktop-floating-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: absolute;
+            right: clamp(36px, 5.5vw, 84px);
+            bottom: 44px;
+            z-index: 3;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 16px 36px -10px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(15, 23, 42, 0.05);
+            border-radius: 16px;
+            padding: 14px 18px;
+            max-width: 320px;
+          }
+          .hero-proof-badge-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: #eff6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+          .hero-proof-title {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.25;
+          }
+          .hero-proof-sub {
+            font-size: 0.74rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 6px;
+          }
+          .hero-proof-tag-row {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+          }
+          .hero-proof-pill {
+            font-size: 0.65rem;
+            font-weight: 700;
+            background: #f1f5f9;
+            color: #003B73;
+            padding: 2px 7px;
+            border-radius: 999px;
+          }
         }
 
         /* Mobile View (max-width: 959px) */
@@ -488,188 +520,99 @@ export default function Hero({ lang, onOpenAdmission }) {
             display: none !important;
           }
           
-          /* ONLY THIS HEADLINE & TAGLINE IS FULL-WIDTH CENTERED ON MOBILE */
-          .hero-headline-center-box {
-            width: 100% !important;
-            max-width: 100% !important;
-            margin: 10px auto 20px auto !important;
-            text-align: center !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.75) 55%, rgba(255, 255, 255, 0) 100%) !important;
-            padding: 6px 12px 12px 12px !important;
-            border-radius: 20px !important;
+          .hero-eyebrow-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
           }
-          .hero-tagline-en {
-            font-size: 1.5rem !important;
-            line-height: 1.25 !important;
-            text-align: center !important;
-            display: block !important;
-            margin: 0 auto 6px auto !important;
-            color: #E85D04 !important;
-            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8) !important;
-          }
-          .hero-tagline-ta {
-            font-size: 1.15rem !important;
-            line-height: 1.3 !important;
-            text-align: center !important;
-            display: block !important;
-            margin: 0 auto 6px auto !important;
-            color: #E85D04 !important;
-            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8) !important;
-          }
-          .hero-main-h1 {
-            font-size: clamp(1.42rem, 5.8vw, 2.05rem) !important;
+          .hero-editorial-h1 {
+            font-size: clamp(1.48rem, 6vw, 2.15rem) !important;
             font-weight: 900 !important;
             line-height: 1.22 !important;
             letter-spacing: -0.015em !important;
-            margin-bottom: 18px !important;
+            margin-bottom: 16px !important;
             text-align: center !important;
             width: 100% !important;
-            color: #003B73 !important;
-            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.85) !important;
           }
-          .hero-h1-line, .hero-h1-line-1, .hero-h1-line-2, .hero-h1-line-3, .hero-h1-line-4 {
-            white-space: normal !important;
-            display: block !important;
-            font-weight: 900 !important;
-          }
-
-          /* SUBTITLE & BADGES REMAIN ON LEFT (62% width) SO RIGHT STUDENT STAYS VISIBLE */
-          .hero-mid-left-box {
+          .hero-editorial-subtitle {
+            font-size: 0.85rem !important;
+            line-height: 1.48 !important;
+            margin-bottom: 16px !important;
+            text-align: left !important;
             max-width: 62% !important;
-            width: 62% !important;
-            align-self: flex-start !important;
-            margin-top: 16px !important;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.70) 75%, rgba(255, 255, 255, 0) 100%) !important;
-            padding: 8px 10px !important;
-            border-radius: 14px !important;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.72) 75%, rgba(255, 255, 255, 0) 100%) !important;
+            padding: 6px 10px !important;
+            border-radius: 10px !important;
           }
-          .hero-subtitle {
-            font-size: 0.84rem !important;
-            line-height: 1.45 !important;
-            margin-bottom: 14px !important;
-            color: #102A43 !important;
-            font-weight: 700 !important;
-            text-align: left !important;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
-          }
-          
-          /* 2x2 grid on mobile within left 60% */
-          .hero-four-badges-row {
-            display: grid !important;
+          .hero-pillar-bento-grid {
             grid-template-columns: 1fr 1fr !important;
-            gap: 12px 10px !important;
+            gap: 8px !important;
+            width: 100% !important;
+            max-width: 62% !important;
+            margin-bottom: 16px !important;
+          }
+          .hero-bento-item {
+            padding: 8px 10px !important;
+            border-radius: 10px !important;
+            gap: 7px !important;
+          }
+          .hero-bento-icon-wrapper {
+            width: 28px !important;
+            height: 28px !important;
+            border-radius: 7px !important;
+          }
+          .hero-bento-icon-wrapper svg {
+            width: 14px !important;
+            height: 14px !important;
+          }
+          .hero-bento-title {
+            font-size: 0.74rem !important;
+          }
+          .hero-bento-sub {
+            display: none !important;
+          }
+          .hero-action-cluster {
             width: 100% !important;
             max-width: 100% !important;
-            margin-bottom: 18px !important;
+            margin-top: 10px !important;
+            gap: 9px !important;
           }
-          .hero-badge-col {
-            align-items: flex-start !important;
-            text-align: left !important;
-            gap: 6px !important;
-            background: transparent !important;
-            padding: 0 !important;
-            border: none !important;
-            box-shadow: none !important;
-          }
-          .hero-badge-icon {
-            width: 36px !important;
-            height: 36px !important;
-            margin: 0 !important;
-          }
-          .hero-badge-icon svg {
-            width: 18px !important;
-            height: 18px !important;
-          }
-          .hero-badge-text {
-            font-size: 0.72rem !important;
-            line-height: 1.25 !important;
-            font-weight: 800 !important;
-            text-align: left !important;
-            color: #003B73 !important;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85) !important;
-          }
-          
-          .hero-actions-container {
-            display: flex !important;
-            flex-direction: column !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            margin-top: 14px !important;
-            gap: 10px !important;
-          }
-          .hero-enroll-btn {
-            width: 100% !important;
-            padding: 12px 14px !important;
+          .hero-cta-primary-btn {
+            padding: 12px 16px !important;
             font-size: 0.90rem !important;
-            box-sizing: border-box !important;
+            border-radius: 10px !important;
           }
-          .hero-call-btn, .hero-wa-btn {
-            width: 100% !important;
-            padding: 10px 8px !important;
+          .hero-action-call, .hero-action-wa {
+            padding: 10px 10px !important;
             font-size: 0.84rem !important;
-            white-space: nowrap !important;
-            gap: 6px !important;
-            letter-spacing: -0.01em !important;
-            box-sizing: border-box !important;
+            border-radius: 10px !important;
+          }
+          .hero-trust-guarantee {
+            justify-content: center !important;
           }
         }
 
         @media (max-width: 480px) {
           .hero-section-custom {
-            min-height: auto !important;
-            padding: 12px 0 24px 0 !important;
+            padding: 10px 0 20px 0 !important;
           }
           .hero-inner-container {
-            padding: 10px 12px 18px 12px !important;
+            padding: 10px 12px 16px 12px !important;
           }
-          .hero-headline-center-box {
-            margin: 8px auto 18px auto !important;
+          .hero-editorial-h1 {
+            font-size: clamp(1.4rem, 6.2vw, 1.85rem) !important;
           }
-          .hero-tagline-en {
-            font-size: 1.38rem !important;
-          }
-          .hero-tagline-ta {
-            font-size: 1.05rem !important;
-          }
-          .hero-main-h1 {
-            font-size: clamp(1.38rem, 6.2vw, 1.85rem) !important;
-            font-weight: 900 !important;
-            line-height: 1.22 !important;
-            letter-spacing: -0.015em !important;
-            margin-bottom: 16px !important;
-          }
-          .hero-mid-left-box {
+          .hero-editorial-subtitle {
             max-width: 64% !important;
-            width: 64% !important;
-            margin-top: 14px !important;
-          }
-          .hero-subtitle {
             font-size: 0.80rem !important;
-            line-height: 1.42 !important;
-            text-align: left !important;
-            font-weight: 700 !important;
-            color: #0f172a !important;
           }
-          .hero-four-badges-row {
-            gap: 10px 8px !important;
+          .hero-pillar-bento-grid {
+            max-width: 64% !important;
+            gap: 6px !important;
           }
-          .hero-badge-col {
-            align-items: flex-start !important;
-            text-align: left !important;
-          }
-          .hero-badge-icon {
-            margin: 0 !important;
-          }
-          .hero-badge-text {
-            font-size: 0.68rem !important;
-            text-align: left !important;
-          }
-          .hero-call-btn, .hero-wa-btn {
+          .hero-action-call, .hero-action-wa {
             font-size: 0.80rem !important;
-            padding: 9px 4px !important;
+            padding: 9px 6px !important;
           }
         }
       `}</style>
